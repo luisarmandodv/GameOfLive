@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Table from './components/Table';
+import Buttons from './components/Buttons';
+import ReactDOM from 'react-dom';
+import { ButtonToolbar, Button } from 'react-bootstrap';
 
 
 class App extends Component {
@@ -37,6 +40,11 @@ class App extends Component {
           }
           table = {this.state.table}
         />
+        <Buttons
+					Start={this.Start}
+					Stop={this.Stop}
+				/>
+
       </div>
     );
   }

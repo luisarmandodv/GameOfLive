@@ -28,7 +28,6 @@
 }
 
 .table {
-  width: 150px;
   line-height: 0;
   margin: auto;
   box-shadow: 0px 0px 20px white;
@@ -52,4 +51,19 @@
 
 .box:hover {
   background: #3498db;
+}
+
+.btnDiv {
+  margin-top: 1cm;
+}
+
+.btnP {
+  font-size: 200%;
+  margin-top: 5%;
+}
+
+.btn {
+  width: 100px;
+  height:40px;
+  margin-left: 1cm;
 }
