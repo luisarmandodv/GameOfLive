@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Table from './components/Table';
+
 
 class App extends Component {
   constructor(){
@@ -29,51 +31,6 @@ class App extends Component {
       </div>
     );
   }
-}
-
-class Table extends Component {
-  render(){
-    const width = (this.props.columns * 27);
-		var rowsArr = [];
-
-		var boxClass = "";
-		for (var i = 0; i < this.props.rows; i++) {
-			for (var j = 0; j < this.props.columns; j++) {
-
-				boxClass = this.props.table[i][j] ? "box on" : "box off";
-				rowsArr.push(
-					<Box
-						boxClass={boxClass}
-						boxPosition={i + "-" + j}
-						row={i}
-						column={j}
-						selectBox={this.props.selectBox}
-					/>
-				);
-			}
-		}
-    return(
-      <div className="table" style={{width: width}}>
-        {rowsArr}
-      </div>
-    );
-  }
-}
-
-class Box extends React.Component {
-	selectBox = () => {
-		this.props.selectBox(this.props.row, this.props.column);
-	}
-
-	render() {
-		return (
-			<div
-				className={this.props.boxClass}
-				id={this.props.id}
-				onClick={this.selectBox}
-			/>
-		);
-	}
 }
 
 export default App;
