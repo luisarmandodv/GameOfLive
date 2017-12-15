@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import '../App.css';
-import { ButtonToolbar, Button, ButtonGroup } from 'react-bootstrap';
+import { ButtonToolbar, Button } from 'react-bootstrap';
 
 class Buttons extends Component {
 	render() {

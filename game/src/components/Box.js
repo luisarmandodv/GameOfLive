@@ -10,7 +10,7 @@ class Box extends React.Component {
 		return (
 			<div
 				className={this.props.boxClass}
-				id={this.props.id}
+				boxPosition={this.props.id}
 				onClick={this.selectBox}
 			/>
 		);
