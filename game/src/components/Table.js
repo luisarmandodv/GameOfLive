@@ -24,7 +24,7 @@ class Table extends Component {
 		}
     return(
       <div className="table" style={{width: width}}>
-        {rowsArr}//show all boxes
+        {rowsArr}
       </div>
     );
   }
