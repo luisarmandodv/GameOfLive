@@ -14,6 +14,7 @@ class App extends Component {
       table: Array(this.rows).fill().map(() => Array(this.columns).fill(false))
     }
   }
+
   render() {
     return (
       <div className="App">
@@ -23,10 +24,18 @@ class App extends Component {
           <h2>by: Armando Duran</h2>
         </header>
         <Table
-          table = {this.state.table}
           rows={this.rows}
           columns={this.columns}
-          selectBox = {this.selectBox}
+          selectBox = {
+            (row, column) => {
+          		let gridCopy = JSON.parse(JSON.stringify(this.state.table));
+          		gridCopy[row][column] = !gridCopy[row][column];
+          		this.setState({
+          			table: gridCopy
+          		});
+          	}
+          }
+          table = {this.state.table}
         />
       </div>
     );
